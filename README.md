@@ -6,54 +6,54 @@ Nesse projeto foi desenvolvido um back-end simples que recebe requisiçes HTTP a
 
 As requisições aceitas são:
 
-+ **GET** (/projects) para **listar** todos os projetos salvos.
++ **GET** (/users) para **listar** todos os projetos salvos.
 
   + A resposta é dada em uma lista de projetos. Como abaixo:
 ```JSON
 [
   {
     "id": "13d4bdd2-5180-48e1-a0ae-f15642bafb20",
-    "title": "Back-end com NodeJS",
-    "owner": "Rubens Guimarães"
+    "name": "Anthony Luis",
+    "email": "cotonete@mail.com"
   },
   {
     "id": "9c0274b1-34c3-483d-aba0-4496b40429e9",
-    "title": "Front-end com ReactJS",
-    "owner": "Rubens Guimarães"
+    "title": "Manuella Siqueira",
+    "email": "manete@mail.com"
   },
   {
     "id": "1c91b467-4bb2-4709-84c1-0977d9d4ce8a",
-    "title": "Aplicativo React Native",
-    "owner": "Rubens Guimarães"
+    "title": "Bernado Alonso",
+    "email": "benalet@mail.com"
   }
 ]
 ```
 
 
-+ **POST** (/projects) para **criar** um novo projeto.
++ **POST** (/users) para **criar** um novo projeto.
 
   + Deve-se enviar os dados no corpo da requisição. Como abaixo:
 
 ```JSON
 {
-	"title": "Projeto 1",
-	"owner": "Rubens"
+	"name": "Projeto 1",
+	"email": "teste@mail.com"
 }
 ```
 
-+ **PUT** (/projects/valor_do_id) para **editar** um projeto existente.
++ **PUT** (/users/valor_do_id) para **editar** um projeto existente.
 
   + Deve-se enviar os dados a serem editador no corpo da requisição. Como abaixo:
 
 ```JSON
 {
-	"title": "Projeto 1",
-	"owner": "Rubens"
+	"name": "Projeto 1",
+	"email": "teste@mail.com"
 }
 ```
 
 
-+ **DELETE** (/projects/valor_do_id) para **deletar** um projeto existente.
++ **DELETE** (/users/valor_do_id) para **deletar** um projeto existente.
 
   + Nessa requisição não há nada no corpo, apenas o ID como parametro na URL.
 
